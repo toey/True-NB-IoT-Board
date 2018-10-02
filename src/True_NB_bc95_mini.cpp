@@ -5,9 +5,6 @@ Author: True IoT
 Create Date: 1 May 2018
 Modified: 16 May 2018
 
-Modified : 2018.JUN.1
-Re-coding to compatible with IoTtweet.com
-
 */
 
 
@@ -402,42 +399,6 @@ bool True_NB_bc95::sendUDPstr(String ip, String port, String data) {
     h_buf++;
   }
   MODEM_SERIAL->print("\r\n");
-
-}
-
-String True_NB_bc95::WriteDashboardIoTtweet(String userid, String key, float slot0, float slot1, float slot2, float slot3, String tw, String twpb){
-
-  _userid = userid;
-  _key = key;
-  _slot0 = slot0;
-  _slot1 = slot1;
-  _slot2 = slot2;
-  _slot3 = slot3;
-  _tw = tw;
-  _twpb = twpb;
-
-  Serial.println("------ Send to Cloud.IoTtweet -------");
-             _packet = _userid;
-             _packet += ":";
-             _packet += _key;
-             _packet += ":";
-             _packet += String(_slot0);
-             _packet += ":";
-             _packet += String(_slot1);
-             _packet += ":";
-             _packet += String(_slot2);
-             _packet += ":";
-             _packet += String(_slot3);
-             _packet += ":";
-             _packet += _tw;
-             _packet += ":";
-             _packet += _twpb;
-
-  Serial.println("packet sent : " + String(_packet));
-  Serial.println("--------------------------------------");
-
-  sendUDPstr(IoTtweetNBIoT_HOST, IoTtweetNBIoT_PORT, _packet);
-  return "OK";
 
 }
 
