@@ -8,7 +8,7 @@ Modified: 16 May 2018
 */
 
 
-#include "True_NB_bc95.h"
+#include "True_NB_bc95_mini.h"
 
 bool True_NB_bc95::reboot() {
   MODEM_SERIAL->println("AT+NRB");
