@@ -19,7 +19,6 @@ The library is using Software Serial for communication with Arduino board.
 		Software Serial
 		○ RX : PIN8
 		○ TX : PIN9
-	สามารถเชื่อมตอ่กบั Raspberry Pi ผา่นทาง USB และสามารถเลอืกใช้ผา่นทาง UART ได้ 
 	Additional Feature:
 		o NB-IoT Module Reset Button
 		o Power Status LED
